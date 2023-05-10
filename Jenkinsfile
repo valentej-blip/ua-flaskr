@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker build -t local-flaskr ./flaskr'
-                sh 'docker run -d --name flaskr -p 8030:8030 local-flaskr'
+                sh './deploy.sh'
             }
         }
     }
